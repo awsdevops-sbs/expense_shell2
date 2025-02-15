@@ -2,7 +2,7 @@ source common.sh
 
 pass=$1
 
-if [ -z "$pass" ]; then
+if [ -z "${pass}" ]; then
    print " no password " &>>$Log
    exit 1
    fi

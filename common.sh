@@ -5,9 +5,9 @@ print(){
 }
 check_status(){
   if [ $? -eq 0 ]; then
-  echo -e "\e[31mSucess\e[0m"
+  echo -e "\e[30mSucess\e[0m"
   else
-     echo -e "\e[32mFailure\e[0m"
+     echo -e "\e[31mFailure\e[0m"
      fi
      }
 
