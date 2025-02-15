@@ -4,7 +4,7 @@ pass=$1
 
 if [ -z "${pass}" ]; then
    echo "no password " &>>$Log
-   exit 1
+   exit 11
    fi
 
 
