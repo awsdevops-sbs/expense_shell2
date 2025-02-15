@@ -33,7 +33,7 @@ check_status $? &>>$Log
 App_req
 
 print "Installing NPM" &>>$Log
-cd ${app_dir} &>>$Log
+cd /app &>>$Log
 npm install &>>$Log
 check_status $? &>>$Log
 
