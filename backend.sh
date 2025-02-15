@@ -48,5 +48,5 @@ dnf install mysql -y
 check_status $? &>>$Log
 
  print "Load sechma"
-mysql -h mysql-dev.awsdevops.sbs -uroot -p${pass} < /app/schema/${component}.sql
+mysql -h mysql-dev.awsdevops.sbs -uroot -p${pass} < /app/schema/backend.sql &>>$Log
 check_status $? &>>$Log
