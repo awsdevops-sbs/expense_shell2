@@ -1,6 +1,6 @@
 source common.sh
 app_dir=/app
-Component=backend
+component=backend
 pass=$1
 
 if [ -z "$pass" ]; then
@@ -47,5 +47,5 @@ dnf install mysql -y
 check_status $? &>>$Log
 
  print "Load sechma"
-mysql -h mysql-dev.awsdevops.sbs -uroot -p${pass} < /app/schema/${Component}.sql
+mysql -h mysql-dev.awsdevops.sbs -uroot -p${pass} < /app/schema/${component}.sql
 check_status $? &>>$Log
