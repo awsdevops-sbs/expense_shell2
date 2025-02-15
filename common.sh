@@ -14,7 +14,7 @@ check_status(){
 App_req(){
 
  print "Remove old content" &>>$Log
-rm -rf ${app_dir}/*
+rm -rf ${app_dir} &>>$Log
 check_status $? &>>$Log
 
 print "Create the directory" &>>$Log
