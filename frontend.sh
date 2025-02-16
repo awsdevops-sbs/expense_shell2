@@ -1,5 +1,5 @@
 source common.sh
-Component=frontend
+component=frontend
 app_dir=/usr/share/nginx/html
 
 print "install nginx"
