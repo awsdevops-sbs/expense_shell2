@@ -7,8 +7,6 @@ if [ -z "${pass}" ]; then
    fi
 
  print "Installing MySQL Server..."
-
-
 sudo dnf install mysql-server -y &>>$Log
 check_status $? &>>$Log
 
