@@ -48,6 +48,6 @@ print "Install Mysql"
 dnf install mysql -y
 check_status $?
 
- print "Load sechma"
+print "Load Schema"
 mysql -h mysql-dev.awsdevops.sbs -uroot -p${pass} < /app/schema/backend.sql &>>$Log
-check_status $? &>>$Log
+check_status $?
