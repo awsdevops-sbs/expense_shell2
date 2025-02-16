@@ -22,7 +22,7 @@ check_status $?
 
 print "Adding application user "
 id expense &>>$Log
-if [ $? -eq 0 ]; then
+if [ $? -ne 0 ]; then
  useradd expense &>>$Log
 fi
 check_status $?
@@ -48,6 +48,8 @@ print "Install Mysql"
 dnf install mysql -y
 check_status $?
 
-print "Load Schema"
+ print "Load sechma"
 mysql -h mysql-dev.awsdevops.sbs -uroot -p${pass} < /app/schema/backend.sql &>>$Log
-check_status $?
+#mysql -h mysql-dev.awsdevops.sbs -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>$LOG
+check_status $? &>>$Log
+
