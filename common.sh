@@ -13,19 +13,19 @@ check_status(){
 
 App_req(){
 
- print "Remove old content" &>>$Log
+ print "Remove old content"
 rm -rf ${app_dir} &>>$Log
 check_status $? &>>$Log
 
-print "Create the directory" &>>$Log
+print "Create the directory"
 mkdir ${app_dir} &>>$Log
-check_status $? &>>$Log
+check_status $?
 
-print "Download frontend components" &>>$Log
+print "Download frontend components"
  sudo curl -o /tmp/${component}.zip https://expense-artifacts.s3.amazonaws.com/expense-${component}-v2.zip &>>$Log
-check_status $? &>>$Log
+check_status $?
 
-print "Extract and  unzip download " &>>$Log
-unzip /tmp/${Component}.zip &>>$Log
-check_status $? &>>$Log
+print "Extract and  unzip download "
+unzip /tmp/${component}.zip &>>$Log
+check_status $?
 }
