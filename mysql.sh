@@ -13,12 +13,12 @@ sudo dnf install mysql-server -y &>>$Log
 check_status $? &>>$Log
 
 # Start and enable MySQL service
- print "Starting and enabling MySQL..." &>>$Log
+ print "Starting and enabling MySQL..."
 sudo systemctl start mysqld &>>$Log
 sudo systemctl enable mysqld &>>$Log
 check_status $? &>>$Log
 
- print "setting up the password" &>>$Log
+ print "setting up the password"
 echo "Show database" | mysql -h mysql-dev.awsdevops.sbs -uroot -p"${pass}" &>>$Log
 check_status $? &>>$Log
    if [ $? -eq 0 ]; then
