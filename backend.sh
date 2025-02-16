@@ -22,6 +22,7 @@ check_status $?
 
 print "Adding application user "
 id expense &>>$Log
+
 if [ $? -ne 0 ]; then
  useradd expense &>>$Log
 fi
