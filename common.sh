@@ -26,6 +26,8 @@ print "Download frontend components"
 check_status $?
 
 print "Extract and  unzip download "
-unzip /tmp/${component}.zip &>>$Log
+  cd ${app_dir} &>>$LOG
+  unzip /tmp/${component}.zip &>>$LOG
+
 check_status $?
 }

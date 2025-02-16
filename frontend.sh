@@ -14,6 +14,6 @@ check_status $?
 App_req
 
 print "Start the nginx service"
-systemctl enable nginx &>>$LOG
-systemctl restart nginx &>>$LOG
+systemctl enable nginx &>>$Log
+systemctl restart nginx &>>$Log
 check_status $?
