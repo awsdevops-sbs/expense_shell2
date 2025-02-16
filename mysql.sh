@@ -2,11 +2,11 @@ source common.sh
 pass=$1
 
 if [ -z "${pass}" ]; then
-   echo "no password " &>>$Log
+   echo "no password "
    exit 1
    fi
 
- print "Installing MySQL Server..." &>>$Log
+ print "Installing MySQL Server..."
 
 
 sudo dnf install mysql-server -y &>>$Log
