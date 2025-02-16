@@ -4,6 +4,7 @@ component=backend
 pass=$1
 
 if [ -z "$pass" ]; then
+  print "no password"
    exit 1
   fi
 
