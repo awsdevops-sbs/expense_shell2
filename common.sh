@@ -22,7 +22,7 @@ mkdir ${app_dir} &>>$Log
 check_status $?
 
 print "Download frontend components"
- sudo curl -o /tmp/${component}.zip https://expense-artifacts.s3.amazonaws.com/expense-${component}-v2.zip &>>$Log
+ sudo curl -o /tmp/${component}.zip https://expense-artifacts.s3.amazonaws.com/expense-${component}-v2.zip
 check_status $?
 
 print "Extract and  unzip download "
