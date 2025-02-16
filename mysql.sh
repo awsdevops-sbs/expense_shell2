@@ -17,10 +17,10 @@ sudo systemctl enable mysqld &>>$Log
 check_status $?
 
  print "setting up the password"
-echo "Show database" | mysql -h mysql-dev.awsdevops.sbs -uroot -p"${pass}" &>>$Log
+echo "Show database" | mysql -h mysql-dev.awsdevops.sbs -uroot -p${pass} &>>$Log
 check_status $? &>>$Log
    if [ $? -eq 0 ]; then
-     mysql_secure_installation --set-root-pass "${pass}" &>>$Log
+     mysql_secure_installation --set-root-pass ${pass} &>>$Log
      check_status $?
      fi
 
