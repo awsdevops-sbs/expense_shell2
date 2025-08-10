@@ -46,11 +46,11 @@ systemctl start backend &>>$Log
 check_status $?
 
 print "Install Mysql"
-dnf install mysql -y
+dnf install mysql.yml -y
 check_status $?
 
  print "Load sechma"
-mysql -h mysql-dev.awsdevops.sbs -uroot -p${pass} < /app/schema/backend.sql &>>$Log
-#mysql -h mysql-dev.awsdevops.sbs -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>$LOG
+mysql.yml -h mysql.yml-dev.awsdevops.sbs -uroot -p${pass} < /app/schema/backend.sql &>>$Log
+#mysql.yml -h mysql.yml-dev.awsdevops.sbs -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>$LOG
 check_status $? &>>$Log
 
